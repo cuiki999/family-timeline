@@ -1,0 +1,82 @@
+.titles {
+  margin: 0 auto;  
+  width: 840px;
+  height: 90px;
+
+  .triangle-and-title {
+    width: 168px;
+    height: 90px;
+    position: relative;
+
+    &:nth-child(1) {
+      margin-left: 0px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 168px;
+    }
+
+    &:nth-child(3) {
+      margin-left: 336px;
+    }
+
+    &:nth-child(4) {
+      margin-left: 504px;
+    }
+
+    &:nth-child(5) {
+      margin-left: 672px;
+    }
+
+    .triangle {
+      position: relative;
+      width: 0; 
+      height: 0;
+      top: 35px;
+      left: 60px; 
+      border-top: 40px solid $yellow;
+      border-left: 23px solid transparent;
+      border-right: 23px solid transparent;
+      opacity: 0;
+      -webkit-animation: fadeIn 0.3s both;
+              animation: fadeIn 0.3s both;
+    }
+
+    .fade-in-title {
+      display: block;
+      position: relative;
+      margin-left: -100%;
+      margin-right: -100%;
+      top: 30px;
+      white-space: nowrap;
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: $lightGrey;
+      opacity: 0;
+      -webkit-animation: fadeIn 0.5s both;
+              animation: fadeIn 0.5s both;
+    }
+
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+        top: 10px;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        top: 10px;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+}

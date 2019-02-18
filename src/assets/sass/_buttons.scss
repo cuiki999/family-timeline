@@ -1,0 +1,133 @@
+.buttons {
+  margin: 0px auto 50px auto;
+  width: 824px;
+  font-family: "Open Sans", sans-serif;
+ 
+  button,
+  .connecting-line {   
+    display: inline-block;
+  }
+
+  .connecting-line {
+    position: relative;
+    margin-left: -54px;
+    margin-right: -54px;
+    width: 126px;
+    height: 0px;
+    top: 9px;
+    border-top: 3px solid $lightGrey;
+  }
+
+  div {
+    vertical-align: top;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+
+    button {
+      box-sizing: border-box;
+      width: 48px; 
+      height: 48px;
+      border: 3px solid $lightGrey;
+      border-radius: 50%;
+      cursor: pointer;
+      &::-moz-focus-inner {
+        border: 0;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:active {
+        .greydot {
+          background-color: #8e8d8d;
+        }
+      }
+
+      .greydot { 
+        position: relative;
+        display: inline-block; 
+        opacity: 0;
+        margin-top: 3px;
+        left: 0px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $lightGrey;
+        -webkit-animation: bounceIn 0.3s linear both; 
+                animation: bounceIn 0.3s linear both;
+      }
+    }
+
+    @-webkit-keyframes bounceIn{
+      0%{
+        opacity: 0;
+        -webkit-transform: scale(0.3);
+      }
+      50%{
+        opacity: 0.9;
+        -webkit-transform: scale(1.1);
+      }
+      80%{
+        opacity: 1;
+        -webkit-transform: scale(0.89);
+      }
+      100%{
+        opacity: 1;
+        -webkit-transform: scale(1);
+      }
+    }
+
+    @keyframes bounceIn{
+      0%{
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      50%{
+        opacity: 0.9;
+        transform: scale(1.1);
+      }
+      80%{
+        opacity: 1;
+        transform: scale(0.89);
+      }
+      100%{
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    button:hover + .title {
+      color: #000;
+    }
+
+    #btn1 {
+      background: $orangeButton;
+    }
+
+    #btn2 {
+      background: $greenButton;
+    }
+
+    #btn3 {
+      background: $purpleButton;
+    }
+
+    #btn4 {
+      background: $redButton;
+    }
+
+    #btn5 {
+      background: $blueButton;
+    }
+
+    .title {
+      display: block;
+      margin: 12px auto;
+      font-size: 18px;
+      color: $lightGrey;
+    }      
+  }
+}
+
